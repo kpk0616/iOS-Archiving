@@ -7,6 +7,6 @@
 
 import UIKit
 
-class MyCollectionView: UICollectionView {
+final class MyCollectionView: UICollectionView {
     // Nothing todo
 }

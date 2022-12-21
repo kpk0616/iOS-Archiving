@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CollectionViewController: UIViewController {
+final class CollectionViewController: UIViewController {
     
     private var myCollectionView: MyCollectionView!
     private let dataSource = CollectionViewData.data
@@ -15,7 +15,5 @@ class CollectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-
 }
 

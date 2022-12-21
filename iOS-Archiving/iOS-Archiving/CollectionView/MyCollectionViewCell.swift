@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import Then
 
-class MyCollectionViewCell: UICollectionViewCell {
+final class MyCollectionViewCell: UICollectionViewCell {
     
     static var id: String {
         return NSStringFromClass(Self.self).components(separatedBy: ".").last!
