@@ -17,6 +17,7 @@
 		B8A1A7132953075C007F6C86 /* MyCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A1A7122953075C007F6C86 /* MyCollectionView.swift */; };
 		B8A1A715295307C1007F6C86 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A1A714295307C1007F6C86 /* MyCollectionViewCell.swift */; };
 		B8A1A7182953096A007F6C86 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B8A1A7172953096A007F6C86 /* SnapKit */; };
+		B8A1A71B295309B8007F6C86 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = B8A1A71A295309B8007F6C86 /* Then */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8A1A7182953096A007F6C86 /* SnapKit in Frameworks */,
+				B8A1A71B295309B8007F6C86 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +106,7 @@
 			name = "iOS-Archiving";
 			packageProductDependencies = (
 				B8A1A7172953096A007F6C86 /* SnapKit */,
+				B8A1A71A295309B8007F6C86 /* Then */,
 			);
 			productName = "iOS-Archiving";
 			productReference = B8A1A6F829530538007F6C86 /* iOS-Archiving.app */;
@@ -135,6 +138,7 @@
 			mainGroup = B8A1A6EF29530538007F6C86;
 			packageReferences = (
 				B8A1A7162953096A007F6C86 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				B8A1A719295309B8007F6C86 /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			productRefGroup = B8A1A6F929530538007F6C86 /* Products */;
 			projectDirPath = "";
@@ -396,6 +400,14 @@
 				kind = branch;
 			};
 		};
+		B8A1A719295309B8007F6C86 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -403,6 +415,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B8A1A7162953096A007F6C86 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		B8A1A71A295309B8007F6C86 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B8A1A719295309B8007F6C86 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
