@@ -16,6 +16,7 @@ final class CollectionViewController: UIViewController {
         super.viewDidLoad()
         
         configure()
+        registerCollectionView()
     }
 }
 
@@ -34,6 +35,10 @@ extension CollectionViewController {
             $0.top.equalTo(120)
             $0.left.right.bottom.equalToSuperview().inset(40)
         }
+    }
+    
+    private func registerCollectionView() {
+        myCollectionView.register(MyCollectionView.self, forCellWithReuseIdentifier: MyCollectionViewCell.id)
     }
 }
 
