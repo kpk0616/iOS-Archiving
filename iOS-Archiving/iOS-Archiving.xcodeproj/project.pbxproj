@@ -15,6 +15,8 @@
 		B8A1A70829530539007F6C86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8A1A70629530539007F6C86 /* LaunchScreen.storyboard */; };
 		B8A1A711295306F2007F6C86 /* CollectionViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A1A710295306F2007F6C86 /* CollectionViewData.swift */; };
 		B8A1A7132953075C007F6C86 /* MyCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A1A7122953075C007F6C86 /* MyCollectionView.swift */; };
+		B8A1A715295307C1007F6C86 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A1A714295307C1007F6C86 /* MyCollectionViewCell.swift */; };
+		B8A1A7182953096A007F6C86 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B8A1A7172953096A007F6C86 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,7 @@
 		B8A1A70929530539007F6C86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8A1A710295306F2007F6C86 /* CollectionViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewData.swift; sourceTree = "<group>"; };
 		B8A1A7122953075C007F6C86 /* MyCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionView.swift; sourceTree = "<group>"; };
+		B8A1A714295307C1007F6C86 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8A1A7182953096A007F6C86 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +81,7 @@
 			children = (
 				B8A1A710295306F2007F6C86 /* CollectionViewData.swift */,
 				B8A1A7122953075C007F6C86 /* MyCollectionView.swift */,
+				B8A1A714295307C1007F6C86 /* MyCollectionViewCell.swift */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -97,6 +102,9 @@
 			dependencies = (
 			);
 			name = "iOS-Archiving";
+			packageProductDependencies = (
+				B8A1A7172953096A007F6C86 /* SnapKit */,
+			);
 			productName = "iOS-Archiving";
 			productReference = B8A1A6F829530538007F6C86 /* iOS-Archiving.app */;
 			productType = "com.apple.product-type.application";
@@ -125,6 +133,9 @@
 				Base,
 			);
 			mainGroup = B8A1A6EF29530538007F6C86;
+			packageReferences = (
+				B8A1A7162953096A007F6C86 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = B8A1A6F929530538007F6C86 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -154,6 +165,7 @@
 			files = (
 				B8A1A711295306F2007F6C86 /* CollectionViewData.swift in Sources */,
 				B8A1A70029530538007F6C86 /* ViewController.swift in Sources */,
+				B8A1A715295307C1007F6C86 /* MyCollectionViewCell.swift in Sources */,
 				B8A1A6FC29530538007F6C86 /* AppDelegate.swift in Sources */,
 				B8A1A6FE29530538007F6C86 /* SceneDelegate.swift in Sources */,
 				B8A1A7132953075C007F6C86 /* MyCollectionView.swift in Sources */,
@@ -374,6 +386,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B8A1A7162953096A007F6C86 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B8A1A7172953096A007F6C86 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B8A1A7162953096A007F6C86 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B8A1A6F029530538007F6C86 /* Project object */;
 }
