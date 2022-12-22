@@ -28,6 +28,7 @@ final class MyCollectionViewCell: UICollectionViewCell {
     }
     
     private func configure() {
+        contentView.backgroundColor = .systemGray2
         dataLabel = UILabel()
         dataLabel.font = UIFont.systemFont(ofSize: 32)
         dataLabel.textColor = .label
