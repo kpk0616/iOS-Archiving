@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let window = UIWindow(windowScene: windowScene)
             window.overrideUserInterfaceStyle = UIUserInterfaceStyle.light
             
-            let rootVC = CollectionViewController()
+            let rootVC = HorizontalCarouselCollectionViewController()
             
             window.rootViewController = rootVC
             window.makeKeyAndVisible()
