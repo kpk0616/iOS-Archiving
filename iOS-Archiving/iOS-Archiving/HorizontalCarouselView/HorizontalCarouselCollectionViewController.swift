@@ -74,7 +74,10 @@ extension HorizontalCarouselCollectionViewController: UICollectionViewDelegate, 
         if let cell = cell as? HorizontalCarouselCollectionViewCell {
             cell.model = dataSource[indexPath.item]
         }
-        
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 320, height: collectionView.frame.height)
+       }
 }
