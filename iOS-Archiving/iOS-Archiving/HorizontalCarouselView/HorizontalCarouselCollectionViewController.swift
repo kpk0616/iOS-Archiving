@@ -13,6 +13,14 @@ private let reuseIdentifier = "Cell"
 
 final class HorizontalCarouselCollectionViewController: UIViewController {
     
+    private lazy var scrollMoveButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("4로 스크롤 이동", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.addTarget(self, action: #selector(didTapMoveScrollButton), for: .touchUpInside)
+        return button
+    }()
+    
     var dataSource: [String] = []
     
     lazy var horizontalCarouselCollectionView: UICollectionView = {
@@ -35,10 +43,15 @@ final class HorizontalCarouselCollectionViewController: UIViewController {
 
 extension HorizontalCarouselCollectionViewController {
     private func configure() {
-        
         horizontalCarouselCollectionView.backgroundColor = .brown
+        scrollMoveButton.backgroundColor = .brown
+        scrollMoveButton.snp.makeConstraints {
+            $0.top.leading.trailing.equalTo(view.safeAreaLayoutGuide)
+            $0.height.equalTo(50)
+        }
         horizontalCarouselCollectionView.snp.makeConstraints {
-            $0.center.leading.trailing.equalToSuperview()
+            $0.top.equalTo(scrollMoveButton.snp.bottom)
+            $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(500)
         }
     }
@@ -50,6 +63,7 @@ extension HorizontalCarouselCollectionViewController {
     }
     
     private func addSubviews() {
+        view.addSubview(scrollMoveButton)
         view.addSubview(horizontalCarouselCollectionView)
     }
     
@@ -60,6 +74,12 @@ extension HorizontalCarouselCollectionViewController {
     
     private func registerCell() {
         horizontalCarouselCollectionView.register(HorizontalCarouselCollectionViewCell.self, forCellWithReuseIdentifier: HorizontalCarouselCollectionViewCell.id)
+    }
+    
+    @objc func didTapMoveScrollButton() {
+        DispatchQueue.main.async {
+            [weak self] in self?.horizontalCarouselCollectionView.scrollToItem(at: IndexPath(row: 4, section: 0), at: .top, animated: true)
+        }
     }
 }
 
