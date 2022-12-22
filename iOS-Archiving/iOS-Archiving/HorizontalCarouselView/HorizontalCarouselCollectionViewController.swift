@@ -86,3 +86,9 @@ class HorizontalCarouselCollectionViewController: UICollectionViewController {
     */
 
 }
+
+extension HorizontalCarouselCollectionViewController {
+    private func configure() {
+        horizontalCarouselCollectionView.backgroundColor = .brown
+    }
+}
