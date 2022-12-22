@@ -17,7 +17,7 @@ final class HorizontalCarouselCollectionViewController: UIViewController {
     
     lazy var horizontalCarouselCollectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.scrollDirection = .horizontal
+        flowLayout.scrollDirection = .vertical
         flowLayout.minimumLineSpacing = 50
         let view = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
         return view
@@ -39,7 +39,7 @@ extension HorizontalCarouselCollectionViewController {
         horizontalCarouselCollectionView.backgroundColor = .brown
         horizontalCarouselCollectionView.snp.makeConstraints {
             $0.center.leading.trailing.equalToSuperview()
-            $0.height.equalTo(320)
+            $0.height.equalTo(500)
         }
     }
     
@@ -80,6 +80,6 @@ extension HorizontalCarouselCollectionViewController: UICollectionViewDelegate, 
 
 extension HorizontalCarouselCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 320, height: collectionView.frame.height)
+        return CGSize(width: 320, height: 320)
        }
 }
