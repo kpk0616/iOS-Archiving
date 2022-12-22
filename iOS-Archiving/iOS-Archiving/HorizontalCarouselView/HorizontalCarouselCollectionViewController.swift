@@ -10,7 +10,14 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class HorizontalCarouselCollectionViewController: UICollectionViewController {
-
+    
+    var HorizontalCarouselCollectionView: UICollectionView = {
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.scrollDirection = .horizontal
+        flowLayout.minimumLineSpacing = 50
+        let view = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+        return view
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
