@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 final class CollectionViewController: UIViewController {
     
@@ -17,20 +18,26 @@ final class CollectionViewController: UIViewController {
         
         configure()
         registerCollectionView()
+        setupCollectionViewDelegate()
+        layout()
     }
 }
 
 extension CollectionViewController {
     private func configure() {
+        
         let collectionViewLayer = UICollectionViewFlowLayout()
         collectionViewLayer.sectionInset = UIEdgeInsets(top: 5.0, left: 7.0, bottom: 5.0, right: 7.0)
         collectionViewLayer.minimumLineSpacing = 5
         collectionViewLayer.minimumInteritemSpacing = 1
         
         myCollectionView = MyCollectionView(frame: .zero, collectionViewLayout: collectionViewLayer)
-        myCollectionView.backgroundColor = .lightGray
+    }
+    
+    private func layout() {
+        view.backgroundColor = .white
         view.addSubview(myCollectionView)
-        
+        myCollectionView.backgroundColor = .secondarySystemBackground
         myCollectionView.snp.makeConstraints {
             $0.top.equalTo(120)
             $0.left.right.bottom.equalToSuperview().inset(40)
@@ -38,7 +45,7 @@ extension CollectionViewController {
     }
     
     private func registerCollectionView() {
-        myCollectionView.register(MyCollectionView.self, forCellWithReuseIdentifier: MyCollectionViewCell.id)
+        myCollectionView.register(MyCollectionViewCell.self, forCellWithReuseIdentifier: MyCollectionViewCell.id)
     }
     
     private func setupCollectionViewDelegate() {
@@ -48,6 +55,11 @@ extension CollectionViewController {
 }
 
 extension CollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return UICollectionViewFlowLayout.automaticSize
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataSource.count
     }
