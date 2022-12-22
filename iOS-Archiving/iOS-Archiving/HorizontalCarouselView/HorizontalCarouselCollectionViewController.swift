@@ -11,11 +11,11 @@ import Then
 
 private let reuseIdentifier = "Cell"
 
-final class HorizontalCarouselCollectionViewController: UICollectionViewController {
+final class HorizontalCarouselCollectionViewController: UIViewController {
     
     var dataSource: [String] = []
     
-    var horizontalCarouselCollectionView: UICollectionView = {
+    lazy var horizontalCarouselCollectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
         flowLayout.minimumLineSpacing = 50
@@ -25,17 +25,17 @@ final class HorizontalCarouselCollectionViewController: UICollectionViewControll
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupDelegate()
+        setupDataSource()
         addSubviews()
         configure()
-        setupDataSource()
-        setupDelegate()
         registerCell()
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
     }
 }
 
 extension HorizontalCarouselCollectionViewController {
     private func configure() {
+        
         horizontalCarouselCollectionView.backgroundColor = .brown
         horizontalCarouselCollectionView.snp.makeConstraints {
             $0.center.leading.trailing.equalToSuperview()
@@ -50,7 +50,7 @@ extension HorizontalCarouselCollectionViewController {
     }
     
     private func addSubviews() {
-        view.addSubview(collectionView)
+        view.addSubview(horizontalCarouselCollectionView)
     }
     
     private func setupDelegate() {
@@ -63,13 +63,13 @@ extension HorizontalCarouselCollectionViewController {
     }
 }
 
-extension HorizontalCarouselCollectionViewController {
+extension HorizontalCarouselCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataSource.count
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HorizontalCarouselCollectionViewCell.id, for: indexPath)
         if let cell = cell as? HorizontalCarouselCollectionViewCell {
             cell.model = dataSource[indexPath.item]
