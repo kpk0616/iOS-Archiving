@@ -40,5 +40,24 @@ extension CollectionViewController {
     private func registerCollectionView() {
         myCollectionView.register(MyCollectionView.self, forCellWithReuseIdentifier: MyCollectionViewCell.id)
     }
+    
+    private func setupCollectionViewDelegate() {
+        myCollectionView.dataSource = self
+        myCollectionView.delegate = self
+    }
+}
+
+extension CollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return dataSource.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionViewCell.id, for: indexPath) as! MyCollectionViewCell
+        cell.dataLabel.text = dataSource[indexPath.item]
+        return cell
+    }
+    
+    
 }
 
