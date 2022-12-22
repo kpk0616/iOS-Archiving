@@ -22,7 +22,6 @@ final class HorizontalCarouselCollectionViewController: UIViewController {
         let view = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
         return view
     }()
-    // FlowLayout이 한 줄에 정렬되게 하는 애랬나? 그걸 이용해서 스쿠ㅡ롤 이 되게 하는 것 같은데..
 
     override func viewDidLoad() {
         super.viewDidLoad()
