@@ -11,7 +11,7 @@ private let reuseIdentifier = "Cell"
 
 class HorizontalCarouselCollectionViewController: UICollectionViewController {
     
-    var HorizontalCarouselCollectionView: UICollectionView = {
+    var horizontalCarouselCollectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
         flowLayout.minimumLineSpacing = 50
