@@ -11,6 +11,8 @@ private let reuseIdentifier = "Cell"
 
 class HorizontalCarouselCollectionViewController: UICollectionViewController {
     
+    var dataSource: [String] = []
+    
     var horizontalCarouselCollectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
@@ -90,5 +92,28 @@ class HorizontalCarouselCollectionViewController: UICollectionViewController {
 extension HorizontalCarouselCollectionViewController {
     private func configure() {
         horizontalCarouselCollectionView.backgroundColor = .brown
+        horizontalCarouselCollectionView.snp.makeConstraints {
+            $0.center.leading.trailing.equalToSuperview()
+            $0.height.equalTo(320)
+        }
+    }
+    
+    private func setupDataSource() {
+        for i in 0...10 {
+            dataSource += ["\(i)"]
+        }
+    }
+    
+    private func addSubviews() {
+        view.addSubview(collectionView)
+    }
+    
+    private func setupDelegate() {
+        horizontalCarouselCollectionView.delegate = self
+        horizontalCarouselCollectionView.dataSource = self
+    }
+    
+    private func registerCell() {
+        horizontalCarouselCollectionView.register(HorizontalCarouselCollectionViewCell.self, forCellWithReuseIdentifier: HorizontalCarouselCollectionViewCell.id)
     }
 }
