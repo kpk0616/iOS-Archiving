@@ -8,5 +8,5 @@
 import UIKit
 
 final class MyCollectionView: UICollectionView {
-    // Nothing todo
+  // Nothing todo
 }
