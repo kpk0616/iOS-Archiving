@@ -10,13 +10,10 @@ import SnapKit
 import Then
 
 class HorizontalCarouselCollectionViewCell: UICollectionViewCell {
-  
   static var id: String {
     NSStringFromClass(Self.self).components(separatedBy: ".").last!
   }
-  
   var model: String? { didSet { bind() } }
-  
   var titleLabel: UILabel = {
     let label = UILabel()
     return label

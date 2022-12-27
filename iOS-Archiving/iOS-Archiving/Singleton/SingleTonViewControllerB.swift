@@ -8,16 +8,13 @@
 import UIKit
 
 final class SingleTonViewControllerB: UIViewController {
-  
   private let userInfo = UserInfo.shared
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
     setName()
     setLayout()
   }
-  
-
 }
 
 extension SingleTonViewControllerB {

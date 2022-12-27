@@ -12,7 +12,6 @@ import Then
 private let reuseIdentifier = "Cell"
 
 final class HorizontalCarouselCollectionViewController: UIViewController {
-  
   private lazy var scrollMoveButton: UIButton = {
     let button = UIButton()
     button.setTitle("4로 스크롤 이동", for: .normal)
@@ -20,9 +19,9 @@ final class HorizontalCarouselCollectionViewController: UIViewController {
     button.addTarget(self, action: #selector(didTapMoveScrollButton), for: .touchUpInside)
     return button
   }()
-  
+
   var dataSource: [String] = []
-  
+
   lazy var horizontalCarouselCollectionView: UICollectionView = {
     let flowLayout = UICollectionViewFlowLayout()
     flowLayout.scrollDirection = .vertical

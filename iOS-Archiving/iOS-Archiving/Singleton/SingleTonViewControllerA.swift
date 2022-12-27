@@ -10,8 +10,7 @@ import Then
 import SnapKit
 
 final class SingleTonViewControllerA: UIViewController {
-  
-  let userInfo = UserInfo.shared
+  private let userInfo = UserInfo.shared
   
   private lazy var navigationButton = UIButton().then {
     $0.setTitle("다음 화면으로 이동", for: .normal)
