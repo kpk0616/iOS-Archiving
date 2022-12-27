@@ -15,7 +15,9 @@ final class SingleTonViewControllerA: UIViewController {
     super.viewDidLoad()
     setId()
   }
-  
+}
+
+extension SingleTonViewControllerA {
   private func setId() {
     userInfo.id = "epark"
   }
