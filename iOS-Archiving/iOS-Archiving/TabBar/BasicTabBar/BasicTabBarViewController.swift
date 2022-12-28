@@ -45,7 +45,7 @@ extension BasicTabBarViewController {
 
 final class FirstBasicTabBarViewController: UIViewController {
   override func viewDidLoad() {
-    view.backgroundColor = .systemRed
+    view.backgroundColor = .systemBrown
   }
 }
 
@@ -69,6 +69,6 @@ final class FourthBasicTabBarViewController: UIViewController {
 
 final class FifthBasicTabBarViewController: UIViewController {
   override func viewDidLoad() {
-    view.backgroundColor = .systemBlue
+    view.backgroundColor = .systemGray2
   }
 }
