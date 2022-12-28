@@ -13,6 +13,7 @@ final class BasicTabBarViewController: UITabBarController {
     super.viewDidLoad()
     view.backgroundColor = .black
     setViewControllers()
+    configureTabBar()
   }
 }
 
@@ -40,6 +41,13 @@ extension BasicTabBarViewController {
       ThirdViewController,
       fourthViewController,
       fifthViewController], animated: true)
+  }
+  
+  private func configureTabBar() {
+    let appearance = UITabBarAppearance()
+    appearance.backgroundColor = .white
+    self.tabBar.standardAppearance = appearance
+    self.tabBar.scrollEdgeAppearance = self.tabBar.standardAppearance
   }
 }
 
