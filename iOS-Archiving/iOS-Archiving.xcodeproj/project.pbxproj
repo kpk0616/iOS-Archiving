@@ -25,6 +25,7 @@
 		B8A1A71B295309B8007F6C86 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = B8A1A71A295309B8007F6C86 /* Then */; };
 		B8A1A72029548F6F007F6C86 /* HorizontalCarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A1A71F29548F6F007F6C86 /* HorizontalCarouselCollectionViewCell.swift */; };
 		B8A1A72229549215007F6C86 /* HorizontalCarouselCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A1A72129549215007F6C86 /* HorizontalCarouselCollectionViewController.swift */; };
+		B8C02EF1295C83A2005612CE /* CurvedTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C02EF0295C83A2005612CE /* CurvedTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		B8A1A714295307C1007F6C86 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		B8A1A71F29548F6F007F6C86 /* HorizontalCarouselCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCarouselCollectionViewCell.swift; sourceTree = "<group>"; };
 		B8A1A72129549215007F6C86 /* HorizontalCarouselCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCarouselCollectionViewController.swift; sourceTree = "<group>"; };
+		B8C02EF0295C83A2005612CE /* CurvedTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		B806BAD0295C5ECB00D03553 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				B8C02EEF295C8304005612CE /* CurvedTabBar */,
 				B806BAD1295C5EEB00D03553 /* BasicTabBar */,
 			);
 			path = TabBar;
@@ -155,6 +158,14 @@
 				B8A1A72129549215007F6C86 /* HorizontalCarouselCollectionViewController.swift */,
 			);
 			path = HorizontalCarouselView;
+			sourceTree = "<group>";
+		};
+		B8C02EEF295C8304005612CE /* CurvedTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				B8C02EF0295C83A2005612CE /* CurvedTabView.swift */,
+			);
+			path = CurvedTabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +258,7 @@
 				B8A1A6FC29530538007F6C86 /* AppDelegate.swift in Sources */,
 				B8A1A6FE29530538007F6C86 /* SceneDelegate.swift in Sources */,
 				B8A1A72229549215007F6C86 /* HorizontalCarouselCollectionViewController.swift in Sources */,
+				B8C02EF1295C83A2005612CE /* CurvedTabView.swift in Sources */,
 				B806BACB295AEAB500D03553 /* SingleTonViewControllerB.swift in Sources */,
 				B8A1A7132953075C007F6C86 /* MyCollectionView.swift in Sources */,
 			);
