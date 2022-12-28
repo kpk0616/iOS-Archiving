@@ -28,7 +28,7 @@ final class SingleTonViewControllerA: UIViewController {
 extension SingleTonViewControllerA {
   private func setId() {
     userInfo.id = "epark"
-    print(userInfo.id)
+    print(userInfo.id!)
   }
   
   private func setLayout() {

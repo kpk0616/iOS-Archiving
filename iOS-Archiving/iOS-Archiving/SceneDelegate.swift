@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       let window = UIWindow(windowScene: windowScene)
       window.overrideUserInterfaceStyle = UIUserInterfaceStyle.light
       
-      let rootVC = SingleTonViewControllerA()
+      let rootVC = ClosureViewController()
       let navigationController = UINavigationController(rootViewController: rootVC)
       
       window.rootViewController = navigationController

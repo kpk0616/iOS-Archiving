@@ -20,8 +20,8 @@ final class SingleTonViewControllerB: UIViewController {
 extension SingleTonViewControllerB {
   private func setName() {
     userInfo.name = "의서"
-    print(userInfo.id)
-    print(userInfo.name)
+    print(userInfo.id!)
+    print(userInfo.name!)
   }
   
   private func setLayout() {

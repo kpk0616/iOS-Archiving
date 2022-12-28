@@ -10,6 +10,7 @@
 		B806BAC7295AE80900D03553 /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B806BAC6295AE80900D03553 /* UserInfoModel.swift */; };
 		B806BAC9295AE95100D03553 /* SingleTonViewControllerA.swift in Sources */ = {isa = PBXBuildFile; fileRef = B806BAC8295AE95100D03553 /* SingleTonViewControllerA.swift */; };
 		B806BACB295AEAB500D03553 /* SingleTonViewControllerB.swift in Sources */ = {isa = PBXBuildFile; fileRef = B806BACA295AEAB500D03553 /* SingleTonViewControllerB.swift */; };
+		B806BACF295C2C4100D03553 /* ClosureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B806BACE295C2C4100D03553 /* ClosureViewController.swift */; };
 		B8A1A6FC29530538007F6C86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A1A6FB29530538007F6C86 /* AppDelegate.swift */; };
 		B8A1A6FE29530538007F6C86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A1A6FD29530538007F6C86 /* SceneDelegate.swift */; };
 		B8A1A70029530538007F6C86 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A1A6FF29530538007F6C86 /* CollectionViewController.swift */; };
@@ -29,6 +30,7 @@
 		B806BAC6295AE80900D03553 /* UserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
 		B806BAC8295AE95100D03553 /* SingleTonViewControllerA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTonViewControllerA.swift; sourceTree = "<group>"; };
 		B806BACA295AEAB500D03553 /* SingleTonViewControllerB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTonViewControllerB.swift; sourceTree = "<group>"; };
+		B806BACE295C2C4100D03553 /* ClosureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureViewController.swift; sourceTree = "<group>"; };
 		B8A1A6F829530538007F6C86 /* iOS-Archiving.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Archiving.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8A1A6FB29530538007F6C86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8A1A6FD29530538007F6C86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,21 @@
 			path = Singleton;
 			sourceTree = "<group>";
 		};
+		B806BACC295C279D00D03553 /* BlurEffect */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BlurEffect;
+			sourceTree = "<group>";
+		};
+		B806BACD295C2C3000D03553 /* Closure */ = {
+			isa = PBXGroup;
+			children = (
+				B806BACE295C2C4100D03553 /* ClosureViewController.swift */,
+			);
+			path = Closure;
+			sourceTree = "<group>";
+		};
 		B8A1A6EF29530538007F6C86 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +103,8 @@
 		B8A1A6FA29530538007F6C86 /* iOS-Archiving */ = {
 			isa = PBXGroup;
 			children = (
+				B806BACD295C2C3000D03553 /* Closure */,
+				B806BACC295C279D00D03553 /* BlurEffect */,
 				B806BAC5295AE7D200D03553 /* Singleton */,
 				B8A1A71E29548CD8007F6C86 /* HorizontalCarouselView */,
 				B8A1A70F29530674007F6C86 /* CollectionView */,
@@ -204,6 +223,7 @@
 				B8A1A70029530538007F6C86 /* CollectionViewController.swift in Sources */,
 				B8A1A72029548F6F007F6C86 /* HorizontalCarouselCollectionViewCell.swift in Sources */,
 				B8A1A715295307C1007F6C86 /* MyCollectionViewCell.swift in Sources */,
+				B806BACF295C2C4100D03553 /* ClosureViewController.swift in Sources */,
 				B8A1A6FC29530538007F6C86 /* AppDelegate.swift in Sources */,
 				B8A1A6FE29530538007F6C86 /* SceneDelegate.swift in Sources */,
 				B8A1A72229549215007F6C86 /* HorizontalCarouselCollectionViewController.swift in Sources */,
