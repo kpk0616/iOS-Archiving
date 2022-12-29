@@ -6,14 +6,17 @@
 //
 
 import UIKit
+import SnapKit
+import Then
 
 final class BasicTabBarViewController: UITabBarController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = .black
+    setLayout()
     setViewControllers()
-    configureTabBar()
+//    configureTabBar()
     
     delegate = self
     
@@ -111,7 +114,7 @@ extension BasicTabBarViewController: UITabBarControllerDelegate  {
     return true
   }
   
-  func animateToTab(toIndex: Int) {
+  private func animateToTab(toIndex: Int) {
     guard let tabViewControllers = viewControllers,
           let selectedVC = selectedViewController else { return }
     
@@ -149,5 +152,15 @@ extension BasicTabBarViewController: UITabBarControllerDelegate  {
       self.selectedIndex = toIndex
       self.view.isUserInteractionEnabled = true
     })
+  }
+  
+  private func setLayout() {
+    let curvedTabView = CurvedTabView()
+    self.tabBarController?.tabBar.isHidden = true // 보이게 하는 속성 삭제하면 되나? 일단 해 보고
+    view.addSubview(curvedTabView)
+    curvedTabView.snp.makeConstraints {
+      $0.leading.trailing.bottom.equalToSuperview()
+      $0.height.equalTo(84)
+    }
   }
 }
