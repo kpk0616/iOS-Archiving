@@ -157,7 +157,7 @@ extension BasicTabBarViewController: UITabBarControllerDelegate  {
   private func setLayout() {
     let curvedTabView = CurvedTabView()
     self.tabBarController?.tabBar.isHidden = true // 보이게 하는 속성 삭제하면 되나? 일단 해 보고
-    view.addSubview(curvedTabView)
+    self.tabBar.addSubview(curvedTabView)
     curvedTabView.snp.makeConstraints {
       $0.leading.trailing.bottom.equalToSuperview()
       $0.height.equalTo(84)
