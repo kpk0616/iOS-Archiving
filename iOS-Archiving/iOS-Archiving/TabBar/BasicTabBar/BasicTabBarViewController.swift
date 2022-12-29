@@ -16,7 +16,6 @@ final class BasicTabBarViewController: UITabBarController {
     view.backgroundColor = .black
     setLayout()
     setViewControllers()
-//    configureTabBar()
     
     delegate = self
     
@@ -63,13 +62,6 @@ extension BasicTabBarViewController {
       ThirdViewController,
       fourthViewController,
       fifthViewController], animated: true)
-  }
-  
-  private func configureTabBar() {
-    let appearance = UITabBarAppearance()
-    appearance.backgroundColor = .white
-    self.tabBar.standardAppearance = appearance
-    self.tabBar.scrollEdgeAppearance = self.tabBar.standardAppearance
   }
 }
 
@@ -156,7 +148,6 @@ extension BasicTabBarViewController: UITabBarControllerDelegate  {
   
   private func setLayout() {
     let curvedTabView = CurvedTabView()
-    self.tabBarController?.tabBar.isHidden = true // 보이게 하는 속성 삭제하면 되나? 일단 해 보고
     self.tabBar.addSubview(curvedTabView)
     curvedTabView.snp.makeConstraints {
       $0.leading.trailing.bottom.equalToSuperview()
