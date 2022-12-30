@@ -28,16 +28,11 @@ final class CurvedTabView: UIView {
   }
   override func layoutSubviews() {
     super.layoutSubviews()
-    
     let middleRad: CGFloat = 100.0
-    
-    let cornerRad: CGFloat = 4.0 // 확정
-    
+    let cornerRad: CGFloat = 4.0
     let pth = UIBezierPath()
-    
     let topLeftC: CGPoint = CGPoint(x: bounds.minX + cornerRad, y: bounds.minY + cornerRad)
     let topRightC: CGPoint = CGPoint(x: bounds.maxX - cornerRad, y: bounds.minY + cornerRad)
-
     var pt: CGPoint!
 
     // 1
@@ -79,8 +74,6 @@ final class CurvedTabView: UIView {
     pth.addLine(to: pt)
     
     pth.close()
-    
     shapeLayer.path = pth.cgPath
-    
   }
 }
