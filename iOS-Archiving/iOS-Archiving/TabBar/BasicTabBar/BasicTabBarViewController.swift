@@ -29,7 +29,6 @@ final class BasicTabBarViewController: UITabBarController {
   }
   
   @objc func handleSwipeGesture(_ gesture: UISwipeGestureRecognizer) {
-    
     if gesture.direction == .left {
       if (self.selectedIndex) < (self.viewControllers?.count ?? 1) - 1 {
         animateToTab(toIndex: self.selectedIndex + 1)
